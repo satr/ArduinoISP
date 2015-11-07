@@ -20,6 +20,13 @@ in ...\arduino-002x\examples\ArduinoISP.
 This version is known to work with the avrdude that ships with Arduino-0023.
 That is an older version of avrdude (5.04, latest is 5.11).
 
+Features of this fork:
+- Optional (regulated with "#define"): display for indication of mode, error, hearbit
+-- Supports: LCD 5110
+- SoftSerial to tranfer serial data to\from the client (the target board which is programmed); Baud: 19200 (same as for ISP)
+-- When not in programming mode - Serial can be use to transfer data to and from the client
+-- Automatically detects the request to program the client and blocks transfer data between ISP and the client
+- Optional (regulated with "#define"): LED indication; pins are changed from original - to leave SPI pins free
 
 
 
